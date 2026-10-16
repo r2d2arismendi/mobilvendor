@@ -1,7 +1,7 @@
 
 {
   "ruleSetName": "Clientes",
-  "fileExtension": ".csv",
+  "fileExtension": "csv",
   "delimiter": "|",
   "hasHeader": false,
   "fields": [

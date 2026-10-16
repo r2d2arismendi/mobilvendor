@@ -1,0 +1,226 @@
+
+{
+  "ruleSetName": "Clientes",
+  "fileExtension": ".csv",
+  "delimiter": "|",
+  "hasHeader": false,
+  "fields": [
+    {
+      "name": "CódigoProveedor",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "Obligatorio. Solo se permiten caracteres numéricos."
+    },
+    {
+      "name": "CodigoDistribuidor",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "Obligatorio. Solo se permiten caracteres numéricos."
+    },
+    {
+      "name": "CodigoCliente",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "Obligatorio. Solo se permiten caracteres numéricos."
+    },
+    {
+      "name": "NombreCliente",
+      "required": true,
+      "unique": false,
+      "regex": "^[A-ZÁÉÍÓÚÑÜ\\s]+$",
+      "description": "Obligatorio. Solo letras mayúsculas (incluyendo tildes y Ñ) y espacios."
+    },
+    {
+      "name": "TipoDocumento",
+      "required": true,
+      "unique": false,
+      "regex": "^(RUC|CE|PAS)$",
+      "description": "Obligatorio. Solo se permiten los valores: RUC, CE o PAS."
+    },
+    {
+      "name": "NumeroDocumento",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "Obligatorio. Solo se permiten caracteres numéricos."
+    },
+    {
+      "name": "Dirección",
+      "required": true,
+      "unique": false,
+      "regex": "^[A-ZÁÉÍÓÚÑÜ\\s]+$",
+      "description": "Obligatorio. Solo letras mayúsculas (incluyendo tildes y Ñ) y espacios."
+    },
+    {
+      "name": "Mercado",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    },
+    {
+      "name": "Módulo",
+      "required": false,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "Opcional. Cuando se informa, solo se permiten caracteres numéricos."
+    },
+    {
+      "name": "CanalCliente",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    },
+    {
+      "name": "TipoNegocio",
+      "required": true,
+      "unique": false,
+      "regex": "^(01|29|05|28|09|13|02|25)$",
+      "description": "Obligatorio. Valores permitidos: 01, 29, 05, 28, 09, 13, 02, 25."
+    },
+    {
+      "name": "SubTipoNegocio",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    },
+    {
+      "name": "Ubigeo",
+      "required": true,
+      "unique": false,
+      "regex": "^(0|\\d{5,6})$",
+      "description": "Obligatorio. Debe ser 0 o un número de 5 a 6 dígitos."
+    },
+    {
+      "name": "Distrito",
+      "required": false,
+      "unique": false,
+      "regex": "^[A-ZÁÉÍÓÚÑÜ\\s]+$",
+      "description": "Opcional. Solo letras mayúsculas (incluyendo tildes y Ñ) y espacios."
+    },
+    {
+      "name": "Estatus",
+      "required": true,
+      "unique": false,
+      "regex": "^(A|I)$",
+      "description": "Obligatorio. Solo se permiten los valores: A o I."
+    },
+    {
+      "name": "X",
+      "required": true,
+      "unique": false,
+      "regex": "^-?\\d+\\.\\d{6}$",
+      "description": "Obligatorio. Número con exactamente 6 decimales separados por punto."
+    },
+    {
+      "name": "Y",
+      "required": true,
+      "unique": false,
+      "regex": "^-?\\d+\\.\\d{6}$",
+      "description": "Obligatorio. Número con exactamente 6 decimales separados por punto."
+    },
+    {
+      "name": "CodigoPadre",
+      "required": false,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "Opcional. Cuando se informa, solo se permiten caracteres numéricos."
+    },
+    {
+      "name": "FechaIngreso",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+      "description": "Obligatorio. Formato de fecha esperado: YYYY-MM-DD."
+    },
+    {
+      "name": "FechaActualización",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+      "description": "Obligatorio. Formato de fecha esperado: YYYY-MM-DD."
+    },
+    {
+      "name": "FechaProceso",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]) ([01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d$",
+      "description": "Obligatorio. Formato de fecha y hora esperado: YYYY-MM-DD HH:mm:ss."
+    },
+    {
+      "name": "REF1- Cluster",
+      "required": true,
+      "unique": false,
+      "regex": "^(01|02|03)$",
+      "description": "Obligatorio. Solo se permiten los valores: 01, 02, 03."
+    },
+    {
+      "name": "REF2",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    },
+    {
+      "name": "REF3",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    },
+    {
+      "name": "REF4",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    },
+    {
+      "name": "REF5",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    },
+    {
+      "name": "REF6",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    },
+    {
+      "name": "REF7",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    },
+    {
+      "name": "REF8",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    },
+    {
+      "name": "REF9",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    },
+    {
+      "name": "REF10",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Opcional. Sin restricción de formato."
+    }
+  ]
+}

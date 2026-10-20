@@ -222,4 +222,10 @@
       "description": "Campo opcional. No tiene restricción de formato."
     }
   ]
+  "crossFieldRules": [
+    {
+      "expression": "Módulo == '999' ? CanalCliente == '1' : true",
+      "description": "Si el Módulo es 999, el CanalCliente debe ser obligatoriamente 1."
+    }
+  ]
 }

@@ -221,7 +221,7 @@
       "regex": "^.*$",
       "description": "Campo opcional. No tiene restricción de formato."
     }
-  ]
+  ],
   "crossFieldRules": [
     {
       "expression": "Módulo == '999' ? CanalCliente == '1' : true",

@@ -61,7 +61,7 @@
       "description": "Campo opcional. No tiene restricción de formato."
     },
     {
-      "name": "Módulo",
+      "name": "Modulo",
       "required": false,
       "unique": false,
       "regex": "^\\d+$",

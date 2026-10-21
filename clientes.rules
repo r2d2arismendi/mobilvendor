@@ -224,7 +224,7 @@
   ],
   "crossFieldRules": [
     {
-      "expression": "Módulo == '999' ? CanalCliente == '1' : true",
+      "expression": "Modulo == '999' ? CanalCliente == '1' : true",
       "description": "Si el Módulo es 999, el CanalCliente debe ser obligatoriamente 1."
     }
   ]

@@ -50,7 +50,7 @@
       "name": "Direccion",
       "required": true,
       "unique": false,
-      "regex": "^[0-9]+$",
+      "regex": "^.*$",
       "description": "La dirección es obligatoria, debe estar en mayúsculas sostenidas y permite caracteres alfanuméricos."
     },
     {
@@ -226,6 +226,10 @@
     {
       "expression": "Modulo == '999' and CanalCliente == '1'",
       "description": "Si el Módulo es 999, el CanalCliente debe ser obligatoriamente 1."
+    },
+      {
+      "expression": "(TipoNegocio == '01' or TipoNegocio == '03') and SubTipoNegocio == 'SUB NEGOCIO'",
+      "description": "Si el Tipo de Negocio es '01' o '03', el SubTipo de Negocio debe ser obligatoriamente 'SUB NEGOCIO'."
     }
   ]
 }

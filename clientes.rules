@@ -50,7 +50,7 @@
       "name": "Direccion",
       "required": false,
       "unique": false,
-      "regex": "[\s\S]*",
+      "regex": "^[A-Z]+$",
       "description": "La dirección es obligatoria, debe estar en mayúsculas sostenidas y permite caracteres alfanuméricos."
     },
     {

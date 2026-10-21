@@ -5,7 +5,7 @@
   "hasHeader": false,
   "fields": [
     {
-      "name": "CódigoProveedor",
+      "name": "CodigoProveedor",
       "required": true,
       "unique": false,
       "regex": "^\\d+$",
@@ -99,7 +99,7 @@
       "name": "Distrito",
       "required": false,
       "unique": false,
-      "regex": "[\s\S]*",
+      "regex": "^.*$",
       "description": "Campo opcional. Si tiene valor, debe estar en mayúsculas sostenidas y solo permite caracteres alfabéticos."
     },
     {
@@ -138,7 +138,7 @@
       "description": "La fecha de ingreso es obligatoria. Formato esperado: YYYY-MM-DD."
     },
     {
-      "name": "FechaActualización",
+      "name": "FechaActualizacion",
       "required": true,
       "unique": false,
       "regex": "^(19|20)\\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
@@ -152,7 +152,7 @@
       "description": "La fecha de proceso es obligatoria. Formato esperado: YYYY-MM-DD HH:mm:ss."
     },
     {
-      "name": "REF1- Cluster",
+      "name": "Cluster",
       "required": true,
       "unique": false,
       "regex": "^(01|02|03)$",
@@ -228,8 +228,8 @@
       "description": "Si el Módulo es 999, el CanalCliente debe ser obligatoriamente 1."
     },
     {
-      "expression": "false",
-      "description": "Error forzado permanente en la línea."
+      "expression": "1 == 0",
+      "description": "Error forzado permanente para pruebas de validación cruzada."
     }
   ]
 }

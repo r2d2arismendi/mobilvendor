@@ -226,10 +226,6 @@
     {
       "expression": "Modulo != '999' or CanalCliente == '1'",
       "description": "Si el Módulo es 999, el CanalCliente debe ser obligatoriamente 1."
-    },
-    {
-      "expression": "1 == 0",
-      "description": "Error forzado permanente para pruebas de validación cruzada."
     }
   ]
 }

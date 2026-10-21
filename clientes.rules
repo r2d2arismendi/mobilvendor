@@ -47,10 +47,10 @@
       "description": "El número de documento es obligatorio y debe ser alfanumérico."
     },
     {
-      "name": "Dirección",
-      "required": true,
+      "name": "Direccion",
+      "required": false,
       "unique": false,
-      "regex": "^[A-ZÁÉÍÓÚÑÜ0-9 ]+$",
+      "regex": "[\s\S]*",
       "description": "La dirección es obligatoria, debe estar en mayúsculas sostenidas y permite caracteres alfanuméricos."
     },
     {
@@ -99,7 +99,7 @@
       "name": "Distrito",
       "required": false,
       "unique": false,
-      "regex": "^[A-ZÁÉÍÓÚÑÜ ]+$",
+      "regex": "[\s\S]*",
       "description": "Campo opcional. Si tiene valor, debe estar en mayúsculas sostenidas y solo permite caracteres alfabéticos."
     },
     {

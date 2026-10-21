@@ -48,9 +48,9 @@
     },
     {
       "name": "Direccion",
-      "required": false,
+      "required": true,
       "unique": false,
-      "regex": "^[A-Z]+$",
+      "regex": "^[0-9]+$",
       "description": "La dirección es obligatoria, debe estar en mayúsculas sostenidas y permite caracteres alfanuméricos."
     },
     {

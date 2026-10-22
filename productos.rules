@@ -1,0 +1,186 @@
+{
+  "ruleSetName": "Producto",
+  "fileExtension": "csv",
+  "delimiter": "|",
+  "hasHeader": false,
+  "fields": [
+    {
+      "name": "CodigoProveedor",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "El codigo de proveedor es obligatorio y debe ser un valor numérico."
+    },
+    {
+      "name": "CodigoDistribuidor",
+      "required": true,
+      "unique": true,
+      "regex": "^\\d+$",
+      "description": "El codigo de distribuidor es obligatorio y debe ser un dato numérico único."
+    },
+    {
+      "name": "CodigoProducto",
+      "required": true,
+      "unique": false,
+      "regex": "^[A-Z0-9]+$",
+      "description": "El codigo de producto es obligatorio y debe contener letras en mayúscula y números."
+    },
+    {
+      "name": "NombreProducto",
+      "required": false,
+      "unique": false,
+      "regex": "^[a-zA-Z0-9\\s]+$",
+      "description": "El nombre del producto permite números y letras en mayúsculas y minúsculas."
+    },
+    {
+      "name": "KNAC14",
+      "required": true,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "El campo KNAC14 es obligatorio y permite cualquier tipo de carácter."
+    },
+    {
+      "name": "EAN",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "El campo EAN es opcional."
+    },
+    {
+      "name": "FactorCaja",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+$",
+      "description": "El factor de caja es obligatorio, no puede estar vacío y únicamente permite números."
+    },
+    {
+      "name": "Peso",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+\\.\\d{3}$",
+      "description": "El peso debe ser un número decimal separado por punto con exactamente 3 dígitos decimales."
+    },
+    {
+      "name": "FlagBonificado",
+      "required": true,
+      "unique": false,
+      "regex": "^[PB]$",
+      "description": "El flag bonificado es obligatorio y solo permite valores en mayúscula de las letras P y B."
+    },
+    {
+      "name": "Afecto",
+      "required": true,
+      "unique": false,
+      "regex": "^[01]$",
+      "description": "El campo afecto es obligatorio y únicamente permite valores cero o uno."
+    },
+    {
+      "name": "PrecioCompra",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+\\.\\d{3}$",
+      "description": "El precio de compra es obligatorio y debe ser un número decimal separado por punto con 3 dígitos decimales."
+    },
+    {
+      "name": "PrecioSugerido",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+\\.\\d{3}$",
+      "description": "El precio sugerido es obligatorio y debe ser un número decimal separado por punto con 3 dígitos decimales."
+    },
+    {
+      "name": "PrecioPromedio",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+\\.\\d{3}$",
+      "description": "El precio promedio es obligatorio y debe ser un número decimal separado por punto con 3 dígitos decimales."
+    },
+    {
+      "name": "FechaProceso",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$",
+      "description": "La fecha de proceso es obligatoria y debe tener el formato YYYY-MM-DD HH:MM:SS."
+    },
+    {
+      "name": "REF1",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo de referencia opcional."
+    },
+    {
+      "name": "REF2",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo de referencia opcional."
+    },
+    {
+      "name": "REF3",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo de referencia opcional."
+    },
+    {
+      "name": "REF4",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo de referencia opcional."
+    },
+    {
+      "name": "REF5",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo de referencia opcional."
+    },
+    {
+      "name": "REF6",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo de referencia opcional."
+    },
+    {
+      "name": "REF7",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo de referencia opcional."
+    },
+    {
+      "name": "REF8",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo de referencia opcional."
+    },
+    {
+      "name": "REF9",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo de referencia opcional."
+    },
+    {
+      "name": "REF10",
+      "required": false,
+      "unique": false,
+      "regex": "^.*$",
+      "description": "Campo de referencia opcional."
+    }
+  ],
+  "crossFieldRules": [
+    {
+      "expression": "CodigoProducto == '' or EAN != ''",
+      "description": "Si el campo CodigoProducto está informado, el campo EAN no puede estar vacío."
+    },
+    {
+      "expression": "Peso > 0",
+      "description": "El campo Peso no debe ser menor o igual a 0."
+    }
+  ]
+}
